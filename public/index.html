@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En Sıra Dışı Matematik | Eğitim Merkezi</title>
+    <meta name="description" content="En Sıra Dışı Matematik Eğitim Merkezi - Kaliteli matematik eğitimi için doğru adres">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-calculator"></i>
+                    <span>En Sıra Dışı Matematik</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Matematik'te 
+                    <span class="highlight">5000 Formülü 50 Formüle İndirdik!</span>
+                </h1>
+                <p class="hero-subtitle">
+                    En Sıra Dışı Matematik Özel Öğretim Kursu olarak, öğrencilerimizin matematik becerilerini 
+                    geliştirmek ve onlara güven kazandırmak için buradayız.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn-primary" onclick="scrollToContact()">
+                        <i class="fas fa-phone"></i>
+                        İletişim
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <img src="tanitim.jpeg" alt="En Sıra Dışı Matematik Eğitim Merkezi" class="main-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="container">
+            <h2 class="section-title">Hızlı Erişim</h2>
+            <div class="links-grid">
+                <div class="link-card" onclick="openInstagram()">
+                    <div class="link-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>Güncel paylaşımlarımızı takip edin</p>
+                    <div class="link-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="link-card" onclick="openYouTube()">
+                    <div class="link-icon youtube">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YouTube</h3>
+                    <p>Eğitim videolarımızı izleyin</p>
+                    <div class="link-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="link-card" onclick="openMaps()">
+                    <div class="link-icon maps">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Konum</h3>
+                    <p>Eğitim merkezimizin adresini görün</p>
+                    <div class="link-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="link-card" onclick="scrollToContact()">
+                    <div class="link-icon contact">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>İletişim</h3>
+                    <p>Bizimle iletişime geçin</p>
+                    <div class="link-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Bizimle İletişime Geçin</h3>
+                    <p>Sorularınız için bize ulaşabilirsiniz. Size en kısa sürede döneceğiz.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefon</h4>
+                            <p><a href="tel:+905514820751">+90 551 482 07 51</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>E-posta</h4>
+                            <p><a href="mailto:iletisim@ensiradisimatematik.com">iletisim@ensiradisimatematik.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Adres</h4>
+                            <p><a href="#" onclick="openMaps()">Yıldırım Beyazıt, Şükran Cd. 75A<br>38140 Melikgazi/Kayseri</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Mesaj Gönder</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Adınız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="E-posta adresiniz" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Mesajınız" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-calculator"></i>
+                    <span>En Sıra Dışı Matematik</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#" onclick="openInstagram()" class="footer-link">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                    <a href="#" onclick="openYouTube()" class="footer-link">
+                        <i class="fab fa-youtube"></i>
+                        YouTube
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 En Sıra Dışı Matematik Eğitim Merkezi. Tüm hakları saklıdır.</p>
+                <p class="footer-domain">ensiradisimatematik.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
