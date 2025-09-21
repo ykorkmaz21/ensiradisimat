@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | En Sıra Dışı Matematik</title>
+    <meta name="description" content="Video yönetim paneli - En Sıra Dışı Matematik">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand" onclick="goHome()">
+                    <i class="fas fa-calculator"></i>
+                    <span>En Sıra Dışı Matematik</span>
+                </div>
+                <div class="nav-links">
+                    <a href="/" class="nav-link">Ana Sayfa</a>
+                    <a href="/videos.html" class="nav-link">Videolar</a>
+                    <a href="/admin.html" class="nav-link active">Admin</a>
+                    <button class="nav-link logout-btn" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Çıkış
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Admin Hero Section -->
+    <section class="admin-hero">
+        <div class="container">
+            <div class="admin-hero-content">
+                <h1 class="admin-hero-title">
+                    <i class="fas fa-cog"></i>
+                    Admin Panel
+                </h1>
+                <p class="admin-hero-subtitle">
+                    Video yönetimi ve içerik kontrolü için admin paneli
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Content -->
+    <section class="admin-content">
+        <div class="container">
+            <!-- Video Upload Form -->
+            <div class="admin-section">
+                <h2 class="section-title">
+                    <i class="fas fa-plus-circle"></i>
+                    Yeni Video Ekle
+                </h2>
+                <div class="upload-form">
+                    <form id="videoUploadForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="youtubeUrl">YouTube Linki</label>
+                                <input type="url" id="youtubeUrl" name="youtubeUrl" 
+                                       placeholder="https://www.youtube.com/watch?v=..." required>
+                                <small class="form-help">YouTube video linkini buraya yapıştırın</small>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="videoTitle">Video Başlığı</label>
+                                <input type="text" id="videoTitle" name="videoTitle" 
+                                       placeholder="Video başlığını girin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="videoCategory">Kategori</label>
+                                <select id="videoCategory" name="videoCategory" required>
+                                    <option value="">Kategori seçin</option>
+                                    <option value="tutorials">Konu Anlatımı</option>
+                                    <option value="problem-solving">Problem Çözme</option>
+                                    <option value="exam-prep">Sınav Hazırlık</option>
+                                    <option value="tips">İpuçları</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="videoDescription">Video Açıklaması</label>
+                            <textarea id="videoDescription" name="videoDescription" 
+                                      placeholder="Video açıklamasını girin" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="videoDuration">Video Süresi</label>
+                                <input type="text" id="videoDuration" name="videoDuration" 
+                                       placeholder="15:30" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="videoViews">Görüntülenme Sayısı</label>
+                                <input type="text" id="videoViews" name="videoViews" 
+                                       placeholder="1.2K" required>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-upload"></i>
+                            Video Ekle
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- User Management -->
+            <div class="admin-section">
+                <h2 class="section-title">
+                    <i class="fas fa-users"></i>
+                    Kullanıcı Yönetimi
+                </h2>
+                
+                <div class="user-management">
+                    <div class="add-user-form">
+                        <h3>Yeni Kullanıcı Ekle</h3>
+                        <form id="addUserForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="newUsername">Kullanıcı Adı</label>
+                                    <input type="text" id="newUsername" name="username" 
+                                           placeholder="Kullanıcı adı girin" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newUserEmail">E-posta</label>
+                                    <input type="email" id="newUserEmail" name="email" 
+                                           placeholder="ornek@email.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="tempPassword">Geçici Şifre</label>
+                                    <div class="password-input-group">
+                                        <input type="text" id="tempPassword" name="tempPassword" 
+                                               placeholder="Geçici şifre oluşturulacak" readonly>
+                                        <button type="button" class="btn-generate" onclick="generateTempPassword()">
+                                            <i class="fas fa-sync"></i>
+                                            Oluştur
+                                        </button>
+                                    </div>
+                                    <small class="form-help">Bu şifre kullanıcıya verilecek, ilk girişte değiştirmesi gerekecek</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="userRole">Rol</label>
+                                    <select id="userRole" name="role" required>
+                                        <option value="user">Kullanıcı</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-user-plus"></i>
+                                Kullanıcı Ekle
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="users-list">
+                        <h3>Mevcut Kullanıcılar</h3>
+                        <div class="users-table" id="usersList">
+                            <!-- Users will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video List -->
+            <div class="admin-section">
+                <h2 class="section-title">
+                    <i class="fas fa-list"></i>
+                    Mevcut Videolar
+                    <span class="video-count" id="videoCount">(0 video)</span>
+                </h2>
+                
+                <div class="video-filters">
+                    <button class="filter-btn active" data-filter="all">Tümü</button>
+                    <button class="filter-btn" data-filter="tutorials">Konu Anlatımı</button>
+                    <button class="filter-btn" data-filter="problem-solving">Problem Çözme</button>
+                    <button class="filter-btn" data-filter="exam-prep">Sınav Hazırlık</button>
+                    <button class="filter-btn" data-filter="tips">İpuçları</button>
+                </div>
+                
+                <div class="video-list" id="videoList">
+                    <!-- Videos will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Edit Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-overlay" onclick="closeEditModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Video Düzenle</h3>
+                <button class="modal-close" onclick="closeEditModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editVideoForm">
+                    <input type="hidden" id="editVideoId">
+                    
+                    <div class="form-group">
+                        <label for="editVideoTitle">Video Başlığı</label>
+                        <input type="text" id="editVideoTitle" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editVideoDescription">Video Açıklaması</label>
+                        <textarea id="editVideoDescription" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editVideoCategory">Kategori</label>
+                            <select id="editVideoCategory" required>
+                                <option value="tutorials">Konu Anlatımı</option>
+                                <option value="problem-solving">Problem Çözme</option>
+                                <option value="exam-prep">Sınav Hazırlık</option>
+                                <option value="tips">İpuçları</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="editVideoDuration">Süre</label>
+                            <input type="text" id="editVideoDuration" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="editVideoViews">Görüntülenme</label>
+                            <input type="text" id="editVideoViews" required>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <button type="button" class="btn-secondary" onclick="closeEditModal()">İptal</button>
+                        <button type="submit" class="btn-primary">Kaydet</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-calculator"></i>
+                    <span>En Sıra Dışı Matematik</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#" onclick="openInstagram()" class="footer-link">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                    <a href="#" onclick="openYouTube()" class="footer-link">
+                        <i class="fab fa-youtube"></i>
+                        YouTube
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 En Sıra Dışı Matematik Eğitim Merkezi. Tüm hakları saklıdır.</p>
+                <p class="footer-domain">ensiradisimatematik.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

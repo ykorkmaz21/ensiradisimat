@@ -16,9 +16,20 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
-                <div class="nav-brand">
+                <div class="nav-brand" onclick="goHome()">
                     <i class="fas fa-calculator"></i>
                     <span>En Sıra Dışı Matematik</span>
+                </div>
+                <div class="nav-links">
+                    <a href="/" class="nav-link active">Ana Sayfa</a>
+                    <a href="/videos.html" class="nav-link" id="videosLink">Videolar</a>
+                    <a href="/admin.html" class="nav-link" id="adminLink" style="display: none;">Admin</a>
+                    <a href="/login.html" class="nav-link" id="loginLink">Giriş</a>
+                    <button class="nav-link logout-btn" id="logoutBtn" onclick="logout()" style="display: none;">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Çıkış
+                    </button>
+                    <a href="/#contact" class="nav-link">İletişim</a>
                 </div>
             </div>
         </nav>

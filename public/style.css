@@ -63,6 +63,44 @@ body {
     font-size: 1.75rem;
 }
 
+.nav-brand {
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.logout-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+
 /* Hero Section */
 .hero {
     padding: 8rem 1rem 4rem;
@@ -446,6 +484,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
     .hero-container {
         grid-template-columns: 1fr;
         gap: 2rem;
