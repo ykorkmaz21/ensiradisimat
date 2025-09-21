@@ -1,3 +1,8 @@
+// Navigation function
+function goHome() {
+    window.location.href = '/';
+}
+
 // Smooth scrolling function
 function scrollToContact() {
     const contactSection = document.getElementById('contact');
@@ -113,3 +118,69 @@ window.addEventListener('load', function() {
 // Initialize page
 document.body.style.opacity = '0';
 document.body.style.transition = 'opacity 0.5s ease';
+
+// Check authentication status and update navigation
+document.addEventListener('DOMContentLoaded', function() {
+    updateNavigation();
+});
+
+// Update navigation based on authentication status
+function updateNavigation() {
+    const token = localStorage.getItem('adminToken');
+    const loginLink = document.getElementById('loginLink');
+    const registerLink = document.getElementById('registerLink');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const adminLink = document.getElementById('adminLink');
+    const videosLink = document.getElementById('videosLink');
+    
+    if (token) {
+        // User is logged in
+        if (loginLink) loginLink.style.display = 'none';
+        if (registerLink) registerLink.style.display = 'none';
+        if (logoutBtn) logoutBtn.style.display = 'inline-flex';
+        if (adminLink) adminLink.style.display = 'inline-flex';
+        if (videosLink) {
+            videosLink.onclick = function(e) {
+                // Allow normal navigation to videos
+                return true;
+            };
+        }
+    } else {
+        // User is not logged in
+        if (loginLink) loginLink.style.display = 'inline-flex';
+        if (registerLink) registerLink.style.display = 'inline-flex';
+        if (logoutBtn) logoutBtn.style.display = 'none';
+        if (adminLink) adminLink.style.display = 'none';
+        if (videosLink) {
+            videosLink.onclick = function(e) {
+                e.preventDefault();
+                alert('Videoları görmek için giriş yapmanız gerekiyor.');
+                window.location.href = '/login.html';
+                return false;
+            };
+        }
+    }
+}
+
+// Logout function
+async function logout() {
+    try {
+        const token = localStorage.getItem('adminToken');
+        if (token) {
+            await fetch('/api/auth/logout', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+        }
+    } catch (error) {
+        console.error('Logout error:', error);
+    } finally {
+        localStorage.removeItem('adminToken');
+        localStorage.removeItem('rememberMe');
+        updateNavigation();
+        // Refresh page to update all elements
+        window.location.reload();
+    }
+}

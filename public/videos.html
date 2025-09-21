@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eğitim Videoları | En Sıra Dışı Matematik</title>
+    <meta name="description" content="En Sıra Dışı Matematik - Problem çözme videoları, matematik dersleri ve eğitim içerikleri">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="videos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand" onclick="goHome()">
+                    <i class="fas fa-calculator"></i>
+                    <span>En Sıra Dışı Matematik</span>
+                </div>
+                <div class="nav-links">
+                    <a href="/" class="nav-link">Ana Sayfa</a>
+                    <a href="/videos.html" class="nav-link active">Videolar</a>
+                    <a href="/admin.html" class="nav-link" id="adminLink" style="display: none;">Admin</a>
+                    <a href="/login.html" class="nav-link" id="loginLink" style="display: none;">Giriş</a>
+                    <button class="nav-link logout-btn" id="logoutBtn" onclick="logout()" style="display: none;">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Çıkış
+                    </button>
+                    <a href="/#contact" class="nav-link">İletişim</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="videos-hero">
+        <div class="container">
+            <div class="videos-hero-content">
+                <h1 class="videos-hero-title">
+                    <i class="fas fa-play-circle"></i>
+                    Eğitim Videoları
+                </h1>
+                <p class="videos-hero-subtitle">
+                    Matematik problemlerini çözme teknikleri, konu anlatımları ve 
+                    sınav hazırlık videolarımızla öğrenme sürecinizi destekleyin.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Categories -->
+    <section class="video-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">
+                    <i class="fas fa-th"></i>
+                    Tümü
+                </button>
+                <button class="category-tab" data-category="problem-solving">
+                    <i class="fas fa-puzzle-piece"></i>
+                    Problem Çözme
+                </button>
+                <button class="category-tab" data-category="tutorials">
+                    <i class="fas fa-graduation-cap"></i>
+                    Konu Anlatımları
+                </button>
+                <button class="category-tab" data-category="exam-prep">
+                    <i class="fas fa-clipboard-check"></i>
+                    Sınav Hazırlık
+                </button>
+                <button class="category-tab" data-category="tips">
+                    <i class="fas fa-lightbulb"></i>
+                    İpuçları
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Grid -->
+    <section class="videos-section">
+        <div class="container">
+            <div class="videos-grid" id="videosGrid">
+                <!-- Video cards will be populated by JavaScript -->
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-calculator"></i>
+                    <span>En Sıra Dışı Matematik</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#" onclick="openInstagram()" class="footer-link">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                    <a href="#" onclick="openYouTube()" class="footer-link">
+                        <i class="fab fa-youtube"></i>
+                        YouTube
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 En Sıra Dışı Matematik Eğitim Merkezi. Tüm hakları saklıdır.</p>
+                <p class="footer-domain">ensiradisimatematik.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="videos.js"></script>
+</body>
+</html>

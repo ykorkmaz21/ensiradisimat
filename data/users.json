@@ -1,0 +1,40 @@
+[
+  {
+    "id": "1",
+    "username": "admin",
+    "email": "admin@ensiradisimatematik.com",
+    "password": "$2b$10$X1AtWD6e5bjkOPuAbeeBNe6MRwbOj/7pM1EUC9fuZBfCgPxlFAjR6",
+    "role": "admin",
+    "createdAt": "2025-09-20T18:56:19.493Z",
+    "isActive": true
+  },
+  {
+    "id": "1758394794247",
+    "username": "test123",
+    "email": "test123@gmail.com",
+    "password": "$2b$10$Z3d4.ecifDabwe6L7nSu0.No0m5So1NSR15FBM99z2rDQDctfNK4y",
+    "role": "user",
+    "createdAt": "2025-09-20T18:59:54.247Z",
+    "isActive": true
+  },
+  {
+    "id": "1758492500790",
+    "username": "yunusemre",
+    "email": "ykorkmaz21@ku.edu.tr",
+    "password": "$2b$10$AWyWRsZ7IE6yDuTBqqZzAeslvoXwnsBOPbTUJ7fMlZNWz29fzB1Ku",
+    "role": "admin",
+    "createdAt": "2025-09-21T22:08:20.891Z",
+    "isActive": true,
+    "needsPasswordChange": false
+  },
+  {
+    "id": "1758493469028",
+    "username": "testuser",
+    "email": "test@example.com",
+    "password": "$2b$10$pQB6rvgBU5Us2vGBHgUpNuZ6qhDRckYYqiBwQb/4ZxJjtdEe3CfyC",
+    "role": "user",
+    "createdAt": "2025-09-21T22:24:29.104Z",
+    "isActive": true,
+    "needsPasswordChange": true
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "title": "Matematik Dersi - Video 1",
+    "description": "En Sıra Dışı Matematik eğitim videosu. Matematik konularının detaylı anlatımı ve örnek soru çözümleri.",
+    "thumbnail": "https://img.youtube.com/vi/4sSwVUP0Is8/maxresdefault.jpg",
+    "videoId": "4sSwVUP0Is8",
+    "duration": "15:30",
+    "views": "1.2K",
+    "category": "tutorials",
+    "publishDate": "2024-09-15"
+  },
+  {
+    "id": "2",
+    "title": "Matematik Dersi - Video 2",
+    "description": "Matematik problem çözme teknikleri ve adım adım çözüm yöntemleri. Öğrenciler için faydalı ipuçları.",
+    "thumbnail": "https://img.youtube.com/vi/SZnrZGrX9bo/maxresdefault.jpg",
+    "videoId": "SZnrZGrX9bo",
+    "duration": "18:45",
+    "views": "980",
+    "category": "problem-solving",
+    "publishDate": "2024-09-15"
+  },
+  {
+    "id": "3",
+    "title": "Matematik Problem Çözme Teknikleri",
+    "description": "Matematik problemlerini çözme teknikleri ve stratejileri. Adım adım çözüm yöntemleri ile matematik becerilerinizi geliştirin.",
+    "thumbnail": "https://img.youtube.com/vi/wBs4RbfdjMg/maxresdefault.jpg",
+    "videoId": "wBs4RbfdjMg",
+    "duration": "22:15",
+    "views": "1.5K",
+    "category": "problem-solving",
+    "publishDate": "2024-09-15"
+  },
+  {
+    "id": "4",
+    "title": "Geometri Konu Anlatımı",
+    "description": "Geometri konularının detaylı anlatımı. Temel geometrik şekiller ve özellikleri hakkında kapsamlı bilgi.",
+    "thumbnail": "https://img.youtube.com/vi/sPd3VhBxmyE/maxresdefault.jpg",
+    "videoId": "sPd3VhBxmyE",
+    "duration": "19:30",
+    "views": "1.1K",
+    "category": "tutorials",
+    "publishDate": "2024-09-15"
+  },
+  {
+    "id": "5",
+    "title": "Cebir ve Denklem Çözme",
+    "description": "Cebirsel ifadeler ve denklem çözme teknikleri. Matematiksel düşünme becerilerinizi geliştirin.",
+    "thumbnail": "https://img.youtube.com/vi/3d0Pxz-utiI/maxresdefault.jpg",
+    "videoId": "3d0Pxz-utiI",
+    "duration": "25:45",
+    "views": "1.8K",
+    "category": "tutorials",
+    "publishDate": "2024-09-15"
+  },
+  {
+    "id": "6",
+    "title": "Sınav Hazırlık İpuçları",
+    "description": "Matematik sınavlarına hazırlık için önemli ipuçları ve stratejiler. Başarılı olmak için gerekli teknikler.",
+    "thumbnail": "https://img.youtube.com/vi/yv0hqMn_Rac/maxresdefault.jpg",
+    "videoId": "yv0hqMn_Rac",
+    "duration": "16:20",
+    "views": "2.1K",
+    "category": "exam-prep",
+    "publishDate": "2024-09-15"
+  },
+  {
+    "id": "7",
+    "title": "Matematik Hesaplama Teknikleri",
+    "description": "Hızlı ve doğru hesaplama teknikleri. Matematiksel işlemlerde pratik yöntemler ve ipuçları.",
+    "thumbnail": "https://img.youtube.com/vi/m22TewnqY5o/maxresdefault.jpg",
+    "videoId": "m22TewnqY5o",
+    "duration": "20:10",
+    "views": "1.3K",
+    "category": "tips",
+    "publishDate": "2024-09-15"
+  },
+  {
+    "id": "8",
+    "title": "Fonksiyonlar ve Grafikler",
+    "description": "Fonksiyon kavramı ve grafik çizimi. Matematiksel fonksiyonların görselleştirilmesi ve analizi.",
+    "thumbnail": "https://img.youtube.com/vi/vXIxV-rZgSU/maxresdefault.jpg",
+    "videoId": "vXIxV-rZgSU",
+    "duration": "24:35",
+    "views": "1.6K",
+    "category": "tutorials",
+    "publishDate": "2024-09-15"
+  },
+  {
+    "id": "9",
+    "title": "Trigonometri Temelleri",
+    "description": "Trigonometrik fonksiyonlar ve temel kavramlar. Açı hesaplamaları ve trigonometrik oranlar.",
+    "thumbnail": "https://img.youtube.com/vi/mR5hhRCdwz4/maxresdefault.jpg",
+    "videoId": "mR5hhRCdwz4",
+    "duration": "28:40",
+    "views": "1.4K",
+    "category": "tutorials",
+    "publishDate": "2024-09-15"
+  },
+  {
+    "id": "10",
+    "title": "Matematik Problem Çözme Stratejileri",
+    "description": "Karmaşık matematik problemlerini çözme stratejileri. Analitik düşünme ve problem çözme becerileri.",
+    "thumbnail": "https://img.youtube.com/vi/egVzBvzENv8/maxresdefault.jpg",
+    "videoId": "egVzBvzENv8",
+    "duration": "26:15",
+    "views": "1.9K",
+    "category": "problem-solving",
+    "publishDate": "2024-09-15"
+  }
+]
