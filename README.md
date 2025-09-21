@@ -42,18 +42,6 @@ npm run dev
 
 Website varsayılan olarak `http://localhost:3000` adresinde çalışacaktır.
 
-## 📁 Proje Yapısı
-
-```
-ensiradisimat/
-├── public/
-│   ├── index.html      # Ana sayfa
-│   ├── style.css       # CSS stilleri
-│   └── script.js       # JavaScript fonksiyonları
-├── server.js           # Express sunucu
-├── package.json        # Proje bağımlılıkları
-└── README.md          # Bu dosya
-```
 
 ## 📞 İletişim Bilgileri
 
